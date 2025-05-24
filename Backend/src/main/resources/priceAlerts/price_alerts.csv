@@ -1,0 +1,6 @@
+user_id;product_id;target_price;triggered
+u1;P201;6.00;false
+u2;P301;6.00;false
+u3;P205;2.90;true
+u4;P306;33.00;false
+u5;P307;6.00;true
