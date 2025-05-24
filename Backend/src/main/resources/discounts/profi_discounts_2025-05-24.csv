@@ -1,0 +1,6 @@
+product_id;product_name;brand;package_quantity;package_unit;product_category;from_date;to_date;percentage_of_discount
+P301;lapte integral;Zuzu;1;l;lactate;2025-05-24;2025-05-31;10
+P305;apă minerală carbogazoasă;Borsec;2;l;băuturi;2025-05-24;2025-05-31;9
+P306;detergent pudră;Ariel;3;kg;produse de menaj;2025-05-24;2025-05-31;17
+P307;ciocolată cu lapte;Milka;100;g;dulciuri;2025-05-24;2025-05-31;6
+P309;smântână 30%;Napolact;0.4;kg;lactate;2025-05-24;2025-05-31;12

@@ -6,14 +6,15 @@ import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 
 
 public class CsvDataLoader
 {
-    private static final String PRODUCT_DIR = "src/main/resources/data/products/";
-    private static final String DISCOUNT_DIR = "src/main/resources/data/discounts/";
-    private static final String ALERT_DIR = "src/main/resources/data/priceAlerts/";
+    private static final String PRODUCT_DIR = "src/main/resources/products/";
+    private static final String DISCOUNT_DIR = "src/main/resources/discounts/";
+    private static final String ALERT_DIR = "src/main/resources/priceAlerts/";
 
     public List<Discount> loadDiscounts(String filePath) {
         String storeName = extractStoreNameOnly(filePath);
@@ -39,7 +40,7 @@ public class CsvDataLoader
         try {
             return new CsvToBeanBuilder<PriceAlert>(new FileReader(filePath))
                     .withType(PriceAlert.class)
-                    .withSeparator(',')
+                    .withSeparator(';')
                     .build()
                     .parse();
         } catch (Exception e) {
@@ -121,10 +122,11 @@ public class CsvDataLoader
 
     public void saveAlertsToCsv(List<PriceAlert> alerts, String filePath) {
         try (PrintWriter writer = new PrintWriter(filePath, StandardCharsets.UTF_8)) {
-            writer.println("user_id,product_id,target_price,triggered"); // header
+            writer.println("user_id;product_id;target_price;triggered");
 
             for (PriceAlert alert : alerts) {
-                writer.printf("%s,%s,%.2f,%b%n",
+                writer.printf(Locale.ROOT,
+                        "%s;%s;%.2f;%b%n",
                         alert.getUserId(),
                         alert.getProductId(),
                         alert.getTargetPrice(),

@@ -1,0 +1,11 @@
+product_id;product_name;product_category;brand;package_quantity;package_unit;price;currency
+P301;lapte integral;lactate;Zuzu;1;l;6.25;RON
+P302;făină albă 000;alimente de bază;Băneasa;1;kg;3.60;RON
+P303;mere Golden;legume și fructe;Generic;1;kg;5.00;RON
+P304;șampon fortifiant;îngrijire personală;Head & Shoulders;400;ml;19.00;RON
+P305;apă minerală carbogazoasă;băuturi;Borsec;2;l;3.10;RON
+P306;detergent pudră;produse de menaj;Ariel;3;kg;35.00;RON
+P307;ciocolată cu lapte;dulciuri;Milka;100;g;5.80;RON
+P308;ulei de floarea-soarelui;alimente de bază;Bunica;1;l;8.70;RON
+P309;smântână 30%;lactate;Napolact;0.4;kg;6.00;RON
+P310;bere brună;băuturi;Ursus;0.5;l;3.50;RON
